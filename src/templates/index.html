@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Foundation</title><link rel="stylesheet" href="./stylesheets/app.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+
+	<nav class="top-bar" data-topbar role="navigation">
+		<section class="top-bar-section">
+			<ul class="right">
+				<li><a href="#/about">About</a></li>
+				<li><a href="#/contact">Contact</a></li>
+			</ul>
+		</section>
+	</nav>
+
+
+	<a class="kalachi-logo" href="#">
+		<div id="logoWrapper">
+			<img src="images/Enterprise.png" class="logo hidden-xs">
+		</div>
+	</a>
+
+	<div class="row">
+		<img src="../images/Enterprise.png">
+		<img src="../../images/Enterprise.png">
+		<img src="./images/bmw-mountains.jpg">
+	</div>
+
+	<div class="row">
+		<div class="small-10 medium-4 columns rentalPanel">
+			<label for="pickup-loc">Pickup Location</label>
+			<input id="pickup-loc" name="pickup-loc" placeholder="Airport, city, zip, address, attraction">
+
+			<label>Pickup Date & Time</label>
+		
+			<div class="small-7 columns no-padding">
+				<!-- <label for="pickup-date">Date</label> -->
+				<input id="pickup-date" name="pickup-loc" placeholder="Date">
+			</div>
+
+			<div class="small-5 columns no-right-padding">
+				<!-- <label for="pickup-time">Time</label> -->
+				<input id="pickup-time" name="pickup-time" placeholder="Time">
+			</div>
+
+
+			<label>Return Date & Time</label>
+
+
+			<!-- <form class="custom">
+				<label for="return-loc">
+					<input type="checkbox" CHECKED id="return-loc" style="display: none;">
+					<span class="custom checkbox checked"></span> Label for Checkbox
+				</label>
+			</form> -->
+		
+			<label for="return-loc">
+				<input type="checkbox" CHECKED id="return-loc">
+				<span class="custom checkbox checked">
+				</span> Return to pickup location
+			</label>
+
+			<div class="small-7 columns no-padding">
+				<!-- <label for="return-date">Date</label> -->
+				<input id="return-date" name="return-loc" placeholder="Date">
+			</div>
+
+			<div class="small-5 columns no-right-padding">
+				<!-- <label for="return-time">Time</label> -->
+				<input id="return-time" name="return-time" placeholder="Time">
+			</div>
+
+			<a href="#" id="select-car-btn" class="button">Select A Car</a>
+
+			<a href="#">Under age 25?</a>	
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns">
+			<h1>Yo Foundation</h1>
+		</div>
+	</div>
+
+	<!-- <div class="row">
+		<div class="small-12 columns">
+			<h1>Yo Foundation</h1>
+			<ul>
+				<li>Sass compiling (LibSass / Compass options)</li>
+				<li>Jade templating engine (option)</li>
+				<li>BrowserSync server with live reloading</li>
+				<li>Font Awesome (option)</li>
+				<li>Gulp automation</li>
+				<li>Browserify bundling. To use:
+					<div>terminal: <code>$ npm install someModule --save</code></div>
+					<div>main.js: <code>var someModule = require('someModule');</code></div>
+				</li>
+			</ul>
+		</div>
+	</div> -->
+
+	<link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+	<script src="./node_modules/foundation-datepicker/js/foundation-datepicker.js"></script>
+	<script src="js/bundle.js"></script>
+</body>
+
+</html>

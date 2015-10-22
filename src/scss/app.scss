@@ -40,6 +40,13 @@
 @import "../../node_modules/foundation-sites/scss/foundation/components/_offcanvas";
 @import "../../node_modules/foundation-sites/scss/foundation/components/_visibility";
 
+body { background-color: #E6E6E6; }
+* { font-family: 'Roboto', sans-serif; }
+hr {
+	border-top: 2px solid #006639;
+	margin: 15px 0 15px 0;
+}
+
 .columns.no-left-padding { padding-left: 0; }
 .columns.no-right-padding { padding-right: 0; }
 
@@ -49,66 +56,189 @@
 }
 
 .top-bar {
-		background: transparent;
-		// color: #00A664;
-		overflow: visible;
+	background: transparent;
+	background: #43AC6A;
+	overflow: visible;
+
+	ul.title-area img { height: 45px; }
+
+	.top-bar-section {
+		padding: 15px 15px 0 0;
+
+		ul li, li:not(.has-form) a:not(.button) {
+			background: transparent;
+			line-height: 2em;		
+			color: #00A664;
+
+			&:hover {
+				background: transparent;
+				color: #00A664;
+				border-bottom: 1px solid #00A664;
+			}
+		}
+	}	
 }
 
-// .top-bar-section ul li {
-//     /* background: #333333; */
+// #bmw-bg-img {
+// 	min-width: 1024px;
+// 	width: 100%;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	z-index: -10;
 // }
 
-.top-bar-section li:not(.has-form) a:not(.button) {
-	background: #fff;
-	color: #00A664;
+// .rentalPanel {
+// 	background: #169a5a;
+
+// 	form.custom .custom {
+// 		display: inline-block;
+// 		width: 16px;
+// 		height: 16px;
+// 		position: relative;
+// 		top: -1px;
+// 		vertical-align: middle;
+// 		border: solid 1px #cccccc;
+// 		background: white;
+
+// 		&.checkbox.checked:before {
+// 			content: "\00d7";
+// 			color: #222222;
+// 			position: absolute;
+// 			top: -50%;
+// 			left: 50%;
+// 			margin-top: 4px;
+// 			margin-left: -5px;
+// 		}
+// 	 }
+
+// 	#select-car-btn { width: 100%; }
+// }
+
+// .specialOffers {
+// 		height:175px;
+// 		overflow: hidden;
+
+// 	.outline-btn {
+// 		background: #ffffff;
+// 		border: 1px solid #00A664;
+// 		text-align: center;
+// 		a { color: #00A664; }
+// 		margin-top: 10px;
+// 		padding: 10px;
+// 		width: 100%;
+// 	}
+// }
+
+// .offer-content {
+// 	background-color: rgba(0, 102, 57, .15);
+// 	// height: 100;
+// 	// border: 1px solid #00A664;
+// 	// text-align: center;
+// 	// span { padding: 10px; }
+
+// 	// display: inline-block;
+// 	position: relative;
+// 	overflow: hidden;
+// 	right: -50%;
+// 	bottom:50%;
+
+// 	height: 175px;
+// }
+
+// img {
+// 	height: 175px;
+// 	position: relative;
+// 	left: -50%;
+// 	top:-50%;
+
+// 	position: absolute;
+// 	left: 50%;
+// 	top: 50%;
+// 	transform: translateY(-50%) translateX(-50%);
+// 	margin: auto;
+// }
+
+// .tabs-content {
+// 	background: #fff;
+// 	margin-bottom: 0;
+// }
+
+// #panel1, #panel2, #panel3, #panel4 {
+// 	a {
+// 		color: #00A664;
+// 	}
+// }
+
+footer {
+	text-align: center;
+	background: #006639;
+	padding: 15px;
+
+	span, a {
+		color: #fff;
+		font-size: 0.875em;
+		line-height: 1.5;
+	}
 }
 
-#logoWrapper {
-	background-color: red;
-	color: #ffffff;
-	width: 70px;
-	height: 65px;
-	z-index: 10;
-	position: absolute;
-	display: inline-block;
-	vertical-align: top;
-	padding: 5px;
-	margin-bottom: -37px;
-	top: 0;
-	transition: top 300ms;
-}
+//////////////////////////////////////////////////////////////////////////
+.car-details-panel {
+	// background-color: rgba(0, 102, 57, .15);
+	background-color: #fff;
+	margin: 5px 0 5px 0;
+	color: #656565;
 
-.rentalPanel {
-	background-color: yellow;
+	-webkit-box-shadow: 2px 2px 5px -1px rgba(122,122,122,1);
+	-moz-box-shadow: 2px 2px 5px -1px rgba(122,122,122,1);
+	box-shadow: 2px 2px 5px -1px rgba(122,122,122,1);
 
-	form.custom .custom {
-		display: inline-block;
-		width: 16px;
-		height: 16px;
-		position: relative;
-		top: -1px;
-		vertical-align: middle;
-		border: solid 1px #cccccc;
-		background: white;
-
-		&.checkbox.checked:before {
-			content: "\00d7";
-			color: #222222;
-			position: absolute;
-			top: -50%;
-			left: 50%;
-			margin-top: 4px;
-			margin-left: -5px;
+	.car-type {
+		margin-top: 10px;
+	
+		a {
+			color: #656565;
+			display: block;
 		}
-	 }
 
-	 #select-car-btn { width: 100%; }
+		h2,h4, h6 {
+			color: #656565;
+			line-height: 2.3125rem;
+		}		
+	}
+
+	#select-car-btn {
+		width: 100%;
+		margin: 15px 0 15px 0;
+	}
 }
 
+@mixin triangle($color, $order) {
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-style: solid;
+	border-width: 10px 10px 0;
+	content: "";
+	height: 0;
+	top: 0;
+	left: 0;
+	width: 0;
 
+	border-top-color: $color;
+	top: $order * -1px;
+	z-index: $order + 1;
+}
 
+.triangle-line {
+	margin-bottom: 0;
+}
 
-
-
+.triangle {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	// display: inline-block;
+	@include triangle(lighten(#006639, 0%), 1);
+}
 
 
